@@ -1,0 +1,35 @@
+.link a{
+	float:right;
+	margin:10px;
+	text-decoration:none;
+	padding:12px 14px;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+}
+.link{
+	background-color:black;
+	overflow:hidden;
+	
+}
+.first3{
+	display:flex;
+	
+}
+.last3{
+	display:flex;
+	
+}
+footer a{
+	float:right;
+	color:white;
+	
+	
+	margin:8px;
+	text-decoration:none;
+}
+footer{
+	overflow:hidden;
+	background-color:gray;
+}
+
