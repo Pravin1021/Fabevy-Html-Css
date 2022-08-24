@@ -1,0 +1,52 @@
+.container {
+    background-color: rgba(81, 80, 82, 0.4);
+    overflow: hidden; 
+}
+.container a{
+    float: right;
+    text-decoration: none;
+    margin: 17px;
+    font-weight: bold;
+    padding: 16px 18px;
+    text-align: center;
+    color: rgb(252, 245, 245);
+    font-size:120% ;
+}
+.container h2{
+    float: left;
+    color: rgb(252, 245, 245);
+    margin: 10px;
+    padding: 15px 17px;
+    font-size: 200%;
+}
+body{
+    background-image: url("./back2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.container a:hover{
+    color: rgb(238, 197, 15);
+}
+.music{
+    color: rgb(247, 242, 242);
+    text-align: center;
+    padding-top: 6%;
+    font-size: 300%;
+    font-family:'Russo One';
+    font-weight: bold;
+}
+.song{
+    color:rgb(247, 242, 242) ;
+    text-align: center;
+    font-size: 120%;
+    font-family:'Russo One';
+    
+    
+}
+.but{
+    margin-left: 45%;
+    
+    border-radius: 20%;
+    
+}
