@@ -1,0 +1,105 @@
+!function(){
+    const UNIQUE_ID_LENGTH = 12;
+    const HOST = '//s.getbloom.ai';
+    const SHOP = 'taylor-stitch.myshopify.com'; // NEEDS TO BE CHANGED FOR EACH STORE
+    if(document.referrer == "" || document.referrer.indexOf(location.protocol + "//" + location.host) === 0 || !storageAvailable()) {
+        // this means that they didnt come directly to the site and they came from a different host
+    }else{ 
+        innerFetch("track2_1", {
+            params: {
+                event: "cameFromOutside"
+            }
+        });
+    }
+    // -- getUniqueId is also in bloom_orderStatus.js and bloom_pdpOrderer.js --
+    function getUniqueId() {
+        function makeid(length) {
+                // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+                var result           = '';
+                var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for ( var i = 0; i < length; i++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+    
+        var k = "bloom_uniqueId";
+        var v = bloom_getItem(k);
+        if(!v) {
+            v = makeid(UNIQUE_ID_LENGTH);
+            bloom_setItem(k, v);
+        }
+        return v;
+    }
+    function innerFetch(url, args, successFunc, errorFunc) {
+        // note the cache caches the entire data response from the server
+    
+         function encodeQueryData(data) {
+            // https://stackoverflow.com/questions/111529/how-to-create-query-parameters-in-javascript
+             const ret = [];
+           if(data) {
+             for (let d in data)
+               ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+             return ret.join('&');
+           } else {
+             return '';
+           }
+         }
+    
+        if(args.cache && bloom_getItem(args.cache) && bloom_getItem(args.cache) != "undefined") {
+          var v = bloom_getItem(args.cache);
+          console.log("innerFetch " + url + ": cache hit: got " + v);
+          if(successFunc)
+            successFunc(JSON.parse(v));
+    
+        } else {
+          // query the server
+          var params = args.params || {};
+          params.shop = SHOP;
+          params.unique_id = getUniqueId();
+          params.referer = encodeURIComponent(document.referrer);
+          params.url = encodeURIComponent(window.location.href);
+          console.log(params)
+    
+          var fullUrl = HOST + '/api/' + url + '?' + encodeQueryData(params);
+    
+          fetch(fullUrl).then((res) => res.json(), errorFunc).then((data) => {
+            if(args.cache && data)
+                bloom_setItem(args.cache, JSON.stringify(data));
+            if(successFunc)
+                successFunc(data);
+          }, errorFunc);
+        }
+      }
+      function bloom_setItem(k, v) {
+        let localStorage = window.localStorage;
+        var bloom_userData = JSON.parse(localStorage.getItem('bloom_userData'));
+        if(!bloom_userData) // if the master obj doesnt exist create it
+            bloom_userData = {};
+        bloom_userData[k] = v; // insert new value
+        localStorage.setItem("bloom_userData", JSON.stringify(bloom_userData));
+        return true; // return true for sucessful write
+      }
+      
+      function bloom_getItem(k) {
+        let localStorage = window.localStorage;
+        var bloom_userData = JSON.parse(localStorage.getItem('bloom_userData')); // JSON.parse(null) = null
+        if(bloom_userData && bloom_userData[k] !== undefined){ // if the master obj doesnt exist create it
+            localStorage.removeItem(k); // remove item if it exits
+            return bloom_userData[k];
+        } else if(localStorage.getItem(k) !== null){
+            let v = localStorage.getItem(k);
+            bloom_setItem(k,v); // add this one to the main object
+            localStorage.removeItem(k); // remove item
+            return v; // return item from old system if its there
+        }
+        return null; 
+      }
+      function storageAvailable() {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+        var storage;
+        try { storage = window['localStorage']; var x = '__storage_test__'; storage.setItem(x, x); storage.removeItem(x); return true; }
+        catch(e) { return e instanceof DOMException && ( e.code === 22 || e.code === 1014 || e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') && (storage && storage.length !== 0); }
+      }
+  }()
