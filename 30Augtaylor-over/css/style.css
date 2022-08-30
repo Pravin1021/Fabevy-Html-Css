@@ -1,0 +1,404 @@
+body{
+	margin:0px;
+}
+.hero{
+	padding-bottom: 1px;
+    padding-top: 1px;
+}
+nav{
+	display:flex;
+	justify-content:space-between;
+	margin:10px;
+}
+nav .ul1 li{
+	list-style-type:none;
+	display:inline-block;
+	padding:14px 16px;
+}
+nav .ul1 li a{
+	text-decoration:none;
+	font-size:15px;
+	color:white;
+	font-weight:bold;
+	
+	
+}
+span{
+	color:orange;
+}
+.logo{
+	margin-left:10px;
+	color:white;
+}
+.hero{
+	background-color:rgba(20, 20, 20, 0.5);
+	padding-top: 5px;
+
+	
+}
+.ul1 li a:hover{
+	color:red;
+	background-color:rgba(255,255,255,0.3);
+	padding:15px;
+	border-radius:10px;
+}
+nav .ul2 li a{
+	text-decoration:none;
+	font-size:15px;
+	color:white;
+	font-weight:bold;
+}
+nav .ul2 li{
+	list-style-type:none;
+	display:inline-block;
+	padding:14px 16px;
+
+}
+nav .ul2 li a:hover{
+	color:red;
+	background-color:rgba(255,255,255,0.3);
+	padding:15px;
+	border-radius:10px;
+	
+}
+.backimg1{
+	background-image: url("./img2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:700px;
+	
+	
+}
+.div1 {
+	margin-left: 300px;
+	padding-top: 250px;
+	
+}
+.div1 p{
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 0%;
+	margin: 0%;
+	color:rgba(0,0,0,0.4);
+}
+.div1 h2{
+	font-size: 50px;
+	margin: 0%;
+	color: rgba(0,0,0,0.4);
+	
+}
+.div1 a{
+	color: rgba(0,0,0,0.4);
+	text-decoration: none;
+	padding: 20px;
+	font-size: 20px;
+	
+    
+}
+.but1{
+	background-color:rgba(255, 255, 255,0.4);
+	padding: 20px;
+	border-style: none;
+	margin-top: 50px;
+}
+.div1 a:hover{
+	color: rgb(236, 209, 54);
+}
+.ul3{
+	display:flex;
+	justify-content:space-between;
+}
+.ul3 li{
+	list-style-type:none;
+}
+.ul4{
+	display:flex;
+	justify-content:space-between;
+	
+}
+.ul4 li{
+	list-style-type:none;
+}
+.ul3 a:hover{
+	color:red;
+}
+.ul3{
+	padding-left:25px;
+	padding-right:25px;
+}
+.ul3 h3{
+	padding-left:30px;
+}
+.ul4 h3{
+	padding-left:30px;
+}
+.ul3  a{
+	float:right;
+	color:black;
+	padding:50px;
+    text-decoration:none;	
+}
+.ul4 a{
+	text-decoration:none;
+}
+.ul4{
+	padding-left:25px;
+	padding-right:25px;
+}
+.ul4 a:hover{
+	color:red;
+	
+}
+.ul4  a{
+	color:black;
+	float:right;
+	padding:50px;
+}
+.flex2{
+	padding-top:20px;
+}
+.sec1{
+	padding-top:40px;
+}
+.sec2{
+	display:flex;
+	justify-content:space-between;
+}
+.flex3{
+	display: flex;
+	justify-content: space-between;
+}
+
+.red{
+	text-align: center;
+}
+.blue{
+	text-align: center;
+}
+.but3{
+	padding:15px 25px;
+	border:none;
+	background-color:rgba(0,0,0,0.2);
+	border-radius:10px;
+}
+.but3 a{
+	text-decoration:none;
+	color:rgb(255,255,255);
+}
+.but3 a:hover{
+	color:orange;
+}
+.but3:hover{
+	background-color:rgba(0,0,0,0.5);
+}
+.flex4{
+	background-image: url(./backimg1.webp);
+	height: 600px;
+	margin: 40px;
+	text-align: center;
+	color: aliceblue;
+}
+.flex4 .text1{
+	color: white;
+	padding-top: 100px;
+	
+}
+.heading{
+	text-decoration: underline;
+	font-size: 40px;
+}
+.flex4 .text2{
+	padding-top: 30px;
+}
+.but4 a{
+	text-decoration: none;
+	color:white;
+
+}
+.but4:hover{
+	background-color:rgba(0,0,0,0.5);
+}
+.but4{
+	padding:15px 25px;
+	border:none;
+	background-color:rgba(0,0,0,0.2);
+	border-radius:10px;
+}
+.but4 a:hover{
+	color: darkorange;
+}
+.flex5{
+	padding-top: 100px;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	padding-bottom: 150px;
+}
+.flex5 .part1{
+	padding-left: 150px;
+}
+.flex5 .part2{
+	padding-right: 150px;
+}
+.flex5 .para1{
+	font-size: 10px;
+}
+.flex5 .para2{
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.flex5  .anchor{
+	text-decoration: none;
+	font-size: 15px;
+	color: gray;
+	
+}
+
+.flex5 .anchor:hover{
+   color:rgb(247, 137, 12);
+}
+.part2 .para3{
+	font-size:10px;
+}
+.foot{
+	display: flex;
+	padding-left: 40px;
+	justify-content: space-between;
+	padding-right: 40px;
+	padding-top: 20px;
+	padding-bottom:20px;
+	
+}
+.ullast1{
+	display: flex;
+	
+}
+.ullast1 li{
+	list-style-type: none;
+	margin-left: 30px;
+}
+.ullast1 li a{
+	color: rgb(80, 79, 79);
+	font-size:20px;
+}
+.ullast1 li a:hover{
+    color: rgb(150, 118, 12);
+}
+.footerlast{
+	display: flex;
+	padding-bottom: 10px;
+}
+.footerlast p{
+	margin-left: 50px;
+	font-size: 15px;
+	color: rgb(80, 79, 79);
+}
+.footerlast .ullast2{
+	display: flex;
+
+}
+.footerlast .ullast2 li{
+	list-style-type: none;
+
+}
+.footerlast .ullast2 li a{
+	text-decoration: none;
+	margin: 20px;
+	font-size: 15px;
+	color: rgb(80, 79, 79);
+}
+.footerlast .ullast2 li a:hover{
+	color:rgb(150, 118, 12);
+}
+.foot1  h3 a{
+	text-decoration: none;
+	color:rgb(80, 79, 79) ;
+	font-size: 15px;
+	font-weight: bold;
+
+}
+.foot1 h3 a:hover{
+	color:rgb(150, 118, 12) ;
+}
+.foot1 p{
+	font-size: 15px;
+	padding-top: 20px;
+	color: rgb(80, 79, 79);
+}
+
+.foot2 h5{
+	color: rgb(80, 79, 79);
+	font-size: 15px;
+}
+.foot2 p{
+	font-size: 17px;
+	color: rgb(80, 79, 79);
+
+}
+.foot2 a{
+	color: rgb(80, 79, 79);
+	text-decoration: none;
+}
+.foot2 a:hover{
+	color:rgb(150, 118, 12);
+}
+.foot3 h5{
+	color: rgb(80, 79, 79);
+	font-size: 15px;
+}
+.foot3 p{
+	color:  rgb(80, 79, 79);
+	font-size: 17px;
+}
+.foot3 a{
+	color:  rgb(80, 79, 79);
+	text-decoration: none;
+}
+.foot3 a:hover{
+	color: rgb(150, 118, 12);
+}
+
+.foot4 h5{
+	color: rgb(80, 79, 79);
+	font-size: 15px;
+}
+.foot4 p{
+	color: rgb(80, 79, 79);
+	font-size: 17px;
+}
+.foot4 a{
+	color: rgb(80, 79, 79);
+	text-decoration: none;
+}
+.foot4 a:hover{
+	color:rgb(150, 118, 12)
+}
+hr{
+	height:5px;
+	background-color:black;
+}
+.ul3 li{
+	border:2px solid rgba(255,255,255,0.5);
+}
+.ul4 li{
+	border:2px solid rgba(0,0,0,0.5);
+}
+.ul3 li:hover{
+	border-color:rgba(0,0,0,0.5);
+}
+.ul4 li:hover{
+	border-color:rgba(0,0,0,0.5);
+}
+.ul4 li{
+	border:2px solid rgba(255,255,255,0.5);
+}
+.ul3 li:hover{
+	color:red;
+}
+.ul4 li:hover{
+	color:red;
+}
+
+
+
