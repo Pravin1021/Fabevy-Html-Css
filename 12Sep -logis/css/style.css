@@ -1,0 +1,307 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family:inter;
+}
+.sec1{
+	
+	background-image:url("./worldmap.jpg");
+	width:100%;
+	height:110vh;
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+}
+.container{
+	margin:0px 105px;
+	padding:0px 12px;
+	
+}
+.div1{
+	display:flex;
+	justify-content:space-between;
+
+}
+.div2{
+	text-align:center;
+	padding:20px 0px;
+}
+.div2 h1{
+	color: rgb(255,255,255);
+	padding:10px 20px;
+	font-size:30px;
+	
+}
+.div3{
+	text-align:center;
+	padding:20px 0px;
+	
+}
+.ul1{
+	display:flex;
+	justify-content:space-between;
+	padding:20px 0px;
+}
+.ul1 li{
+	list-style-type:none;
+	
+	
+}
+.ul1 li a{
+	text-decoration:none;
+	color:gray;
+	padding:10px 20px;
+	font-size:20px;
+}
+.ul1 li a:hover{
+	color:white;
+	transition:0.3s;
+}
+.ul1 li .quote{
+	background-color:#0d42ff;
+	border-radius:4px;
+	color:white;
+}
+.ul1 li .quote:hover{
+	background-color:#007aff;
+}
+.div4{
+	display:flex;
+	justify-content:space-between;
+	margin:30px 10px;
+}
+.div5 h2{
+	font-size:45px;
+	color:white;
+	font-weight:100px;
+	
+}
+.div5 p{
+	font-size:16px;
+	padding-top:30px;
+	color:white;
+	
+}
+.div11 .img1{
+	width:100%;
+	height:50vh;
+	padding-left:20px;
+}
+.form1{
+	margin:30px 0px;
+	background-color:white;
+	height:70px;
+	border-radius:8px;
+	
+	
+}
+.form1 .zip{
+	height:50px;
+	width:75%;
+	border:none;
+	margin-left:10px;
+	margin-top:10px;
+	
+	font-size:20px;
+}
+.form1 .zip:focus{
+	outline:none;
+}
+.form1 .but1{
+	height:50px;
+	width:20%;
+	border-radius:10px;
+	background-color:#0d42ff;
+	border:none;
+	color:white;
+	font-size:20px;
+}
+.form1 .but1:hover{
+	background-color:#007aff;
+}
+.div6{
+	display:flex;
+	justify-content:space-between;
+	margin:40px 15px;
+	text-align:center;
+}
+.div7, .div8, .div9, .div10 {
+	color:white;
+	font-size:40px;
+	font-weight:bold;
+	padding:20px 0px;
+}
+.div12{
+	display:flex;
+	justify-content:space-between;
+	
+}
+.div13, .div16, .div19{
+	display:flex;
+	justify-content:space-between;
+}
+.sec2{
+	padding:80px 0px;
+}
+.div13{
+	padding:0px 12px;
+	margin:24px 20px 0px 0px;
+}
+.div14{
+	margin-right:20px;
+}
+.div14 i{
+	font-size:48px;
+	color:#001f8d;
+}
+.div15 h4{
+	font-size:20px;
+	font-weight:700px;
+	margin-bottom:10px;
+}
+.div15 p{
+    font-size:15px;
+	margin-bottom:10px;
+
+}
+.div15 a{
+	text-decoration:none;
+	font-size:14px;
+	color:black;
+	font-weight:700px;
+}
+.div13:hover .div15 h4 {
+	color:#0d42ff;
+	transition:0.3s ease-in-out;
+}
+ .div13:hover .div14 i{
+	 color:#0d42ff;
+	 transition:0.3s ease-in-out;
+ } 
+ .div13:hover a{
+	 color:#0d42ff;
+	 transition:0.3s ease-in-out;
+ }
+ .div16{
+	padding:0px 12px;
+	margin:24px 20px 0px 0px;
+}
+.div17{
+	margin-right:20px;
+}
+.div17 i{
+	font-size:48px;
+	color:#001f8d;
+}
+.div18 h4{
+	font-size:20px;
+	font-weight:700px;
+	margin-bottom:10px;
+}
+.div18 p{
+    font-size:15px;
+	margin-bottom:10px;
+}
+.div18 a{
+	text-decoration:none;
+	font-size:14px;
+	color:black;
+	font-weight:700px;
+}
+.div16:hover .div18 h4 {
+	color:#0d42ff;
+	transition:0.3s ease-in-out;
+}
+ .div16:hover .div17 i{
+	 color:#0d42ff;
+	 transition:0.3s ease-in-out;
+ } 
+ .div16:hover a{
+	 color:#0d42ff;
+	 transition:0.3s ease-in-out;
+ }
+.div19{
+	padding:0px 12px;
+	margin:24px 20px 0px 0px;
+}
+.div20{
+	margin-right:20px;
+}
+.div20 i{
+	font-size:48px;
+	color:#001f8d;
+}
+.div18 h4{
+	font-size:20px;
+	font-weight:700px;
+	margin-bottom:10px;
+}
+.div21 p{
+    font-size:15px;
+	margin-bottom:10px;
+}
+.div21 a{
+	text-decoration:none;
+	font-size:14px;
+	color:black;
+	font-weight:700px;
+}
+.div19:hover .div21 h4 {
+	color:#0d42ff;
+	transition:0.3s ease-in-out;
+}
+ .div19:hover .div20 i{
+	 color:#0d42ff;
+	 transition:0.3s ease-in-out;
+ } 
+ .div19:hover a{
+	 color:#0d42ff;
+	 transition:0.3s ease-in-out;
+ }
+ .div22{
+	 display:flex;
+	 justify-content:space-between;
+ }
+ .div23 li{
+	 list-style-type:none;
+ }
+ .div23 h3{
+	 font-size:32px;
+	 font-weight:700;
+	 color: #001f8d;
+	 margin-bottom:8px;
+ }
+ .div23 p{
+	 font-size:16px;
+	 margin-bottom:18px;
+ }
+.div24 h5{
+	font-size:18px;
+	margin-bottom:10px;
+	color: #001f8d;
+}
+.div24 p{
+	font-size:16px;
+}
+.div25 h5{
+	font-size:18px;
+	margin-bottom:10px;
+	color: #001f8d;
+}
+.div25 p{
+	font-size:16px;
+}
+.div26 h5{
+	font-size:18px;
+	margin-bottom:10px;
+	color: #001f8d;
+}
+.div26 p{
+	font-size:16px;
+}
+.sec4{
+	padding:80px 0px;
+}
