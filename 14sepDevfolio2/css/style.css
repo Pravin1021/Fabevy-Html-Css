@@ -1,0 +1,72 @@
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto';
+} 
+header{
+	padding:20px 0px;
+	background-color:rgba(0,0,0);
+	
+	
+}
+.container{
+	margin:0px 105px;
+	padding:0px 12px;
+	display:flex;
+	justify-content:space-between;
+}
+.logo a{
+	text-decoration:none;
+	color:white;
+}
+.logo a h1{
+	
+	font-size:28px;
+	font-weight:600;
+}
+.navtop .ul1{
+    display:flex;
+	align-items:center;
+}
+.navtop .ul1 li{
+	list-style-type:none;
+	padding: 10px 0 10px 30px;
+}
+.navtop .ul li:hover{
+	
+}
+.navtop .ul1 li a{
+	text-decoration:none;
+	color:white;
+	font-size:16px;
+	font-family: 'Roboto';
+	font-weight:600;
+}
+/*End of hearder*/
+.banner{
+	background:url(./images/hero-bg.jpg);
+	width:100%;
+	height:100vh;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center;
+	position:relative;
+}
+.banner::after{
+	content:"";
+	position:absolute;
+	background-color:rgba(0,0,0,0.6);
+	opacity:0.9;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+}
+.banner-content{
+	position:absolute;
+	z-index:2;
+}
+/*End of Banner*/
