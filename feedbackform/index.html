@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK FORM</title>
+	<style>
+	   li{
+	     list-style-type:disc;
+	   }
+	</style>
+</head>
+<body>
+    <form>
+	   <ul class="ul1">
+	       <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name">				
+		   </li>
+		   <li>
+		        <label for="email">Email:</label>
+                <input type="email" id="email">	
+		   </li>
+		   <li>
+		        <label for="password">Password:</label>
+                <input type="password" id="password">	
+		   </li>
+		   <li>Please check all the emotions that apply to you:</li>
+		       <ul class="ul2">
+			        <li> 
+					<label for="angry">Angry</label>
+					<input type="checkbox" id="angry">
+					</li>
+					<li>
+					<label for="sad">Sad</label>
+					<input type="checkbox" id="sad">
+					</li>
+					<li>
+					<label for="happy">Happy</label>
+					<input type="checkbox" id="happy">
+					
+					</li>
+					<li>
+					<label for="ambivalent">Ambivalent</label>
+					<input type="checkbox" id="ambivalent">
+					</li>
+			   </ul>
+			<li>How satisfied were you with our service?</li>
+                 <ul class="ul3">
+			        <li> 
+					<label for="very">Very satisfied</label>
+					<input type="radio" name ="service" id="very">
+					</li>
+					<li>
+					<label for="satisfied">Satisfied</label>
+					<input type="radio" name ="service" id="satisfied">
+					</li>
+					<li>
+					<label for="care">Didn't care</label>
+					<input type="radio" name ="service" id="care">
+					
+					</li>
+					<li>
+					<label for="dissatisfied">Dissatisfied</label>
+					<input type="radio" name ="service" id="dissatisfied">
+					</li>
+					<li>
+					<label for="verydissatisfied">Very dissatisfied</label>
+					<input type="radio" name ="service" id="verydissatisfied">
+					</li>
+			   </ul>
+            <li>
+			<label for="comment">Further comments:</label>
+			<textarea id="comment"></textarea>
+			</li>	
+            <li>
+			   <label for="bio">Bio photo:</label>
+			   <input type="text" id="bio">
+			   <input type="file" id="bio">
+			</li>
+            <li>
+			  <label for="location">Location visited:</label>
+			  <input list="location" placeholder="Select location">
+			  <datalist id="location">
+			     <option value="India">
+				 <option value="US">
+				 <option value="China">
+			</li>
+            <li>
+			  <input type="submit">
+			</li>			
+	   </ul>
+	</form>
+
+
+</body>
+</html>
