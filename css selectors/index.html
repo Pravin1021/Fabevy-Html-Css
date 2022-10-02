@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.3rem;
+        }
+        h1{
+            color: peru;
+            font-size: 2rem;;
+        }
+        #hash{
+            color:brown;
+        }
+        .dot{
+            color: blueviolet;
+        }
+        a:link{
+            color:rgb(226, 223, 38);
+        }
+        a:visited{
+            color: red;
+        }
+        .anchor:hover{
+            color: aqua;
+        }
+        p::first-line{
+            color: gold;
+        }
+        .para::first-letter{
+            color: darkred;
+            font-size: 2rem;
+        }
+        h5::before{
+            content: "12345";
+        }
+        h6::after{
+            content: "12345";
+        }
+        a[target="_blank"]{
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <!--types of selector-->
+    <h1>Types of selectors</h1>
+     <li>Simple Selector</li>
+     <li>Combination Selector</li>
+     <li>Psuedo-class Selector</li>
+     <li>Psuedo-element Selector</li>
+     <li>Attribute Selector</li>
+
+
+
+     <!--Simple Selector-->
+     <h1>Simple selector</h1>
+     
+     <li>id</li>
+     <p id="hash">where we use # hash</p>
+     
+     <li>class</li>
+     <p class="dot">where we use . dot</p>
+     
+     <li>universal or global</li>
+     <p>where we use *</p>
+
+
+     <!--Combinator Selector-->
+     <h1>Combinator Selector</h1>
+
+
+
+     <!--Psuedo-class selector-->
+     <h1>Psuedo-class selector</h1>
+     
+     <span>: defines</span>
+     
+     <li>Link(unvisited link)</li>
+     <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-class_links">where unvisited link color will different</a>
+
+     <li>Visited</li>
+     <a href="">where visited link color will different</a>
+     
+     <li>hover</li>
+     <a href="" class="anchor">HOVER</a>
+
+
+     <!--Psuedo-element selector-->
+     <h1>Psuedo-element Selector</h1>
+     
+     <span>:: defines</span>
+     
+     <li>first-line</li>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rerum soluta dolores magnam doloribus eum, tempora harum totam cupiditate architecto eius repellat iusto ducimus velit impedit accusantium, quasi debitis dolorem?</p>
+
+     <li>first-letter</li>
+     <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore commodi iure, error quidem aliquam officia reprehenderit cum assumenda tempore. Incidunt eum, neque blanditiis aperiam aliquid temporibus possimus suscipit mollitia esse!</p>
+     
+     <li>before</li>
+     <h5>Before</h5>
+     
+     <li>after</li>
+     <h6>After</h6>
+     
+
+
+     <!--Attribute Selector-->
+     <h1>attribute selector</h1>
+     <p>where we can use attributes to style</p>
+     <a href="#" class="attribute" target="_blank">Pravin</a>
+</body>
+</html>
