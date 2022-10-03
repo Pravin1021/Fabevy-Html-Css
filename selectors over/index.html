@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.3rem;
+        }
+        h1{
+            color: peru;
+            font-size: 2rem;;
+        }
+        #hash{
+            color:brown;
+        }
+        .dot{
+            color: blueviolet;
+        }
+		.group h5,h2{
+		    font-style:italic;
+		}
+        a:link{
+            color:rgb(226, 223, 38);
+        }
+        a:visited{
+            color: red;
+        }
+        .anchor:hover{
+            color: aqua;
+        }
+        .first::first-line{
+            color: gold;
+        }
+        .para::first-letter{
+            color: darkred;
+            font-size: 2rem;
+        }
+        h5::before{
+            content: "12345";
+        }
+        h6::after{
+            content: "12345";
+        }
+		::marker{
+		    color:red;
+		}
+		::selection{
+		    background-color:red;
+		}
+		::active{
+            color:yellow;		
+		 }
+        a[target="_blank"]{
+            background-color: lawngreen;
+        }
+		.child > p{
+		    color:green;
+		}
+		.adjecent + p{
+		    color:blue;
+		}
+		.general ~ p{
+		    color:#ccc;
+		}
+		
+    </style>
+</head>
+<body>
+    <!--types of selector-->
+    <h1>Types of selectors</h1>
+     <li>Simple Selector</li>
+     <li>Combination Selector</li>
+     <li>Psuedo-class Selector</li>
+     <li>Psuedo-element Selector</li>
+     <li>Attribute Selector</li>
+      <br>
+	  <br>
+
+
+     <!--Simple Selector-->
+     <h1>Simple selector</h1>
+     
+     <li>id</li>
+     <p id="hash">where we use # hash</p>
+     <br>
+	 
+     <li>class</li>
+     <p class="dot">where we use . dot</p>
+     
+	 <br>
+	 <li>universal or global</li>
+     <p>where we use *</p>
+	 
+	 <br>
+	 <li>group selector<li>
+	   <span>, defines</span>
+        <div class="group">
+		  <h5>Group</h5>
+		  <h2>kbjofjobfej</h2>
+        </div>		
+      <br>
+	  <br>
+
+     <!--Combinator Selector-->
+     <h1>Combinator Selector</h1>
+	 
+	 <li>descendant selector</li>
+	 <span> space defines</span>
+	 
+	 <br>
+	 
+	 <li>child selector</li>
+	 <span>> defines</span>
+	        <div class="child">
+			  <p>Paragraph 1 in the div.</p>
+			  <p>Paragraph 2 in the div.</p>
+			  <section>
+				<!-- not Child but Descendant -->
+				<p>Paragraph 3 in the div (inside a section element).</p>
+			  </section>
+			  <p>Paragraph 4 in the div.</p>
+			</div>
+	 
+	 <br>
+	 <li>adjacent sibling selector</li>
+	 <span>+ defines</span>
+	 <div class="adjecent">
+	     <p>kbdkjbjkdbqwkjbkjqb</p>
+	    <p>jsdhjhsd</p>
+	 </div>
+	 <p>ljfopqwjpodj</p>
+	 <p>qdkhqwkjd</p>
+	 
+	 <br>
+	 <li>general sibling selector</li>
+	 <span>~ defines</span>
+	 <div class="rupu">
+	 <div class="general">
+	     <p>kbdkjbjkdbqwkjbkjqb</p>
+	    <p>jsdhjhsd</p>
+	 </div>
+	 <p>ljfopqwjpodj</p>
+	 <p>qdkhqwkjd</p>
+	 </div>
+
+
+      <br>
+      <br>
+     <!--Psuedo-class selector-->
+     <h1>Psuedo-class selector</h1>
+     
+	 <br>
+     
+	 <span>: defines</span>
+     
+	 
+	 <br>
+     
+	 <li>Link(unvisited link)</li>
+     <p>it shows unvisited link in different color</p>
+	 <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-class_links" target="_blank">where unvisited link color will different</a>
+      
+	  <br>
+     
+	 <li>Visited</li>
+	 <p>it shows visited link in different color</p>
+     <a href="">where visited link color will different</a>
+     
+	 <br>
+     
+	 <li>hover</li>
+	 <p>while the cursor touch it change color.bgcolor etc.. it includes for img also</p>
+     <a href="" class="anchor">HOVER</a>
+      
+	  <br>
+	  
+	  <li>active</li>
+	  <p>while touch the link it shows diff color while touch</p>
+	      <a href="#">welcome</a>
+	  
+      <br>
+	  <br>
+     <!--Psuedo-element selector-->
+     <h1>Psuedo-element Selector</h1>
+     
+	 <br>
+     
+	 <span>:: defines</span>
+     
+	 <br> 
+     
+	 <li>first-line</li>
+      <p class="first">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rerum soluta dolores magnam doloribus eum, tempora harum totam cupiditate architecto eius repellat iusto ducimus velit impedit accusantium, quasi debitis dolorem?</p>
+    
+	<br>
+    
+	<li>first-letter</li>
+     <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore commodi iure, error quidem aliquam officia reprehenderit cum assumenda tempore. Incidunt eum, neque blanditiis aperiam aliquid temporibus possimus suscipit mollitia esse!</p>
+      
+     <br>	  
+     <li>before</li>
+     <h5>Before</h5>
+     
+	 <br>
+     <li>after</li>
+     <h6>After</h6>
+	 
+	 <br>
+	 <li>marker</li>
+	 <h1>marker</h1>
+	    
+		   <li>menu</li>
+		   <li>home</li>
+		
+	 <br>
+	 <li>selection</li>
+	 <h1>section</h1>
+	 <p>while copy background color will change</p>
+     
+
+
+     <br>
+	 <br>
+	 <!--Attribute Selector-->
+     <h1>attribute selector</h1>
+     <p>where we can use attributes to style</p>
+     <a href="#" class="attribute" target="_blank">Pravin</a>
+	 
+</body>
+</html>
