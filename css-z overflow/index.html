@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index&Overflow</title>
+	<style>
+	h1{
+		font-size:3rem;
+		color:yellowgreen;
+	}
+	h2{
+		font-size:2rem;
+		color:red;
+	}
+	h3{
+		font-size:2rem;
+		color:orange;
+	}
+	li{
+		font-size:1.5rem;
+		color:blue;
+	}
+	.hidden{
+		background-color: skyblue;
+		width: 200px;
+		height: 75px;
+		border: 1px solid green;
+		overflow: hidden;
+	}
+	.scroll{
+		background-color: blue;
+		width: 200px;
+		height: 75px;
+		border: 1px solid red;
+		overflow: scroll;
+	}
+	.scroll p{
+		width:250px;
+		height:75px;
+		
+	}
+	.auto{
+		background-color: yellow;
+		width: 200px;
+		height: 75px;
+		border: 1px solid brown;
+		overflow: auto;
+	}
+	.visible{
+		background-color: yellowgreen;
+		width: 200px;
+		height: 75px;
+		border: 1px solid pink;
+		overflow: visible;
+	}
+	
+	.container{
+		position:relative;
+	}
+	.index{
+		position:relative;
+		background-color:gray;
+		width:300px;
+		height:200px;
+		z-index:2;
+	}
+	.in{
+		position:absolute;
+		width:300px;
+		height:200px;
+		top:50px;
+		bottom:0;
+		right:0;
+		left:50px;
+		z-index:3;
+		background-color:skyblue;
+	}
+	.dex{
+		position:absolute;
+		width:300px;
+		height:200px;
+		top:100px;
+		bottom:0;
+		right:0;
+		left:100px;
+		z-index:1;
+		background-color:blue;
+	}
+	</style>
+</head>
+<body>
+	<h1>z-index & Overflow</h1>
+	
+	<h2>Overflow</h2>
+	<ol>
+		<li>Hidden</li>
+		<li>Scroll</li>
+		<li>Auto</li>
+		<li>Visible</li>
+	</ol><br><br>
+	<h3>Hidden</h3>
+	<div class="hidden">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div><br><br>
+	
+	<h3>Scroll</h3>
+	<div class="scroll"><p>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</p></div>
+	
+	<h3>Auto</h3>
+	<div class="auto">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+	
+	<h3>Visible</h3>
+	<div class="visible">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+	<br><br><br><br><br><br><br><br><br><br>
+	
+	<h2>Z-index</h2>
+	<div class="container">
+		<div class="index"><p>Relative</p></div>
+		<div class="in"><p>Absolute</p></div>
+		<div class="dex"><p>Absolute</p></div>
+	</div>
+</body>	
+</html>
